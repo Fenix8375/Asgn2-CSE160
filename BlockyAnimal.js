@@ -198,11 +198,18 @@ function updateAnimationAngles(){
 
         g_left_front_leg = (40*Math.sin(g_seconds));
 
+    }else{
+
+        g_left_front_leg = 0;
     }
 
     if(g_On){
 
         g_right_front_leg = (-40*Math.sin(g_seconds));
+
+    }else{
+
+        g_right_front_leg = 0;
 
     }
 
@@ -210,24 +217,40 @@ function updateAnimationAngles(){
 
         g_right_back_leg = (30*Math.sin(g_seconds));
 
+    }else{
+
+        g_right_back_leg = 0;
     }
 
     if(g_On){
 
         g_left_back_leg = (-30*Math.sin(g_seconds));
 
+    }else{
+
+        g_left_back_leg = 0;
     }
 
     if(g_On){
 
         g_tail = (15*Math.sin(g_seconds));
 
+    }else{
+
+
+        g_tail = 0;
     }
 
     if(g_On){
 
         g_head = (5*Math.sin(g_seconds));
+
+
+    }else{
+
+        g_head = 0;
     }
+
 
 
 }
