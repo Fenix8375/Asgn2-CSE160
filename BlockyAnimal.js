@@ -198,18 +198,11 @@ function updateAnimationAngles(){
 
         g_left_front_leg = (40*Math.sin(g_seconds));
 
-    }else{
-
-        g_left_front_leg = 0;
     }
 
     if(g_On){
 
         g_right_front_leg = (-40*Math.sin(g_seconds));
-
-    }else{
-
-        g_right_front_leg = 0;
 
     }
 
@@ -217,40 +210,24 @@ function updateAnimationAngles(){
 
         g_right_back_leg = (30*Math.sin(g_seconds));
 
-    }else{
-
-        g_right_back_leg = 0;
     }
 
     if(g_On){
 
         g_left_back_leg = (-30*Math.sin(g_seconds));
 
-    }else{
-
-        g_left_back_leg = 0;
     }
 
     if(g_On){
 
         g_tail = (15*Math.sin(g_seconds));
 
-    }else{
-
-
-        g_tail = 0;
     }
 
     if(g_On){
 
         g_head = (5*Math.sin(g_seconds));
-
-
-    }else{
-
-        g_head = 0;
     }
-
 
 
 }
@@ -315,36 +292,36 @@ function renderScene(){
     // Left eye
     var left_eye = new Cube();
     left_eye.color = [0, 0, 0, 1];
-    left_eye.matrix.set(head.matrix); 
-    left_eye.matrix.translate(0.75, 0.6, 0.1); 
+    left_eye.matrix.set(head.matrix); // Start with the head's matrix
+    left_eye.matrix.translate(0.75, 0.6, 0.1); // Adjust positions relative to head
     left_eye.matrix.scale(0.3, 0.3, 0.3);
 
     // Right eye
     var right_eye = new Cube();
     right_eye.color = [0, 0, 0, 1];
-    right_eye.matrix.set(head.matrix);
-    right_eye.matrix.translate(0.75, 0.6, 0.6); 
+    right_eye.matrix.set(head.matrix); // Start with the head's matrix
+    right_eye.matrix.translate(0.75, 0.6, 0.6); // Adjust positions relative to head
     right_eye.matrix.scale(0.3, 0.3, 0.3);
 
     // Dog's left ear
     var left_ear = new Cube();
     left_ear.color = [0.8, 0.8, 0.8, 1];
-    left_ear.matrix.set(head.matrix); 
-    left_ear.matrix.translate(0.35, 1, 0.1); 
+    left_ear.matrix.set(head.matrix); // Start with the head's matrix
+    left_ear.matrix.translate(0.35, 1, 0.1); // Adjust positions relative to head
     left_ear.matrix.scale(0.3,0.4,0.3);
 
     // Dog's right ear
     var right_ear = new Cube();
     right_ear.color = [0.8, 0.8, 0.8, 1];
-    right_ear.matrix.set(head.matrix); 
-    right_ear.matrix.translate(0.35, 1, 0.6); 
+    right_ear.matrix.set(head.matrix); // Start with the head's matrix
+    right_ear.matrix.translate(0.35, 1, 0.6); // Adjust positions relative to head
     right_ear.matrix.scale(0.3, 0.4, 0.3);
 
     // Dog's nose
     var nose = new Cube();
     nose.color = [1.0, 0.8, 0.7, 1.0];
-    nose.matrix.set(head.matrix); 
-    nose.matrix.translate(0.8, 0.1, 0.25); 
+    nose.matrix.set(head.matrix); // Start with the head's matrix
+    nose.matrix.translate(0.8, 0.1, 0.25); // Adjust positions relative to head
     nose.matrix.scale(0.6, 0.4, 0.5);
 
     // Nose color
